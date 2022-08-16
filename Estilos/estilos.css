@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans&display=swap");
+
+/* Responsive */
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+body {
+    font-family: 'Outfit',  sans-serif;;
+    font-size: 1.2rem;
+    min-height: 100%;
+    background-color:#fefffb;
+  }
+
+.grid-container > * {
+    box-shadow: -1px 1px 7px 0px #565ea0(0, 0, 0, 0.75);
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+  }
+
+
+.navbar{
+    grid-area: navbar;
+    background-color: #f5aec9;
+}
+
+.header{
+    grid-area: header;
+    background-color: #82d1f2;
+}
+
+.secciones{
+    grid-area: secciones;
+    background-color: #565ea0;
+}
+.contacto{
+    grid-area: contacto;
+    background-color: #82d1f2;
+}
+
+.footer{
+    grid-area: footer;
+    background-color: #565ea0;
+}
+
+
+
+.grid-container {
+    display: grid;
+    gap: 10px;
+    grid-template: 
+    "navbar" 50px
+    "header " auto
+    "secciones" auto
+    "contacto " auto
+    "footer " auto 
+    
+    ;
+
+}
+
+@media (min-width: 600px) {
+
+    .grid-container {
+        display: grid;
+        gap: 10px;
+        grid-template: 
+        "navbar" 50px
+        "header " auto
+        "secciones" auto
+        "contacto " auto
+        "footer " auto 
+        
+        ;
+    
+    }
+}
+
+@media (min-width: 900px) {
+
+    .grid-container {
+        display: grid;
+        gap: 10px;
+        grid-template: 
+        "navbar" 50px
+        "header " auto
+        "secciones" auto
+        "contacto " auto
+        "footer " auto 
+        ;
+    
+    }
+}
+
+.header {
+    /* Used to position the video and content */
+    position: relative;
+}
+
+.container__wrapper {
+    /* Positioned at the top left corner */
+    left: 0px;
+    position: absolute;
+    top: 0px;
+
+    /* Take full size */
+    height: 100%;
+    width: 100%;
+
+    /* Hide the scrollbar */
+    overflow: hidden;
+}
+
+.container__video {
+    object-fit: cover;
+
+    /* Center the video */
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    /* Take full width */
+    width: 100%;
+}
+
+.container__content {
+    /* Positioned at the top left corner */
+    left: 0px;
+    position: absolute;
+    top: 0px;
+
+    /* Take full size */
+    height: 100%;
+    width: 100%;
+
+    /* Center the content */
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
