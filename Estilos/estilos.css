@@ -74,7 +74,7 @@ body {
         gap: 10px;
         grid-template: 
         "navbar" 50px
-        "header " auto
+        "header " 700px
         "secciones" auto
         "contacto " auto
         "footer " auto 
