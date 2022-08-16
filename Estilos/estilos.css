@@ -34,7 +34,7 @@ body {
 
 .header{
     grid-area: header;
-    background-color: #82d1f2;
+    background-color: #fefffb;
 }
 
 .secciones{
@@ -91,7 +91,7 @@ body {
         gap: 10px;
         grid-template: 
         "navbar" 50px
-        "header " auto
+        "header " 800px
         "secciones" auto
         "contacto " auto
         "footer " auto 
