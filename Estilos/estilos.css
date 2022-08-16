@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Public+Sans&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap');
 
 /* Responsive */
 
@@ -29,12 +30,12 @@ body {
 
 .navbar{
     grid-area: navbar;
-    background-color: #f5aec9;
+    background-color: #f1c4d5;
 }
 
 .header{
     grid-area: header;
-    background-color: #fefffb;
+    background-color: transparent;
 }
 
 .secciones{
@@ -57,8 +58,8 @@ body {
     display: grid;
     gap: 10px;
     grid-template: 
-    "navbar" 50px
-    "header " auto
+    "navbar" auto
+    "header " 100px
     "secciones" auto
     "contacto " auto
     "footer " auto 
@@ -74,8 +75,8 @@ body {
         gap: 10px;
         grid-template: 
         "navbar" 50px
-        "header " 700px
-        "secciones" auto
+        "header " 1200px
+        "secciones" 100px
         "contacto " auto
         "footer " auto 
         
@@ -92,17 +93,25 @@ body {
         grid-template: 
         "navbar" 50px
         "header " 800px
-        "secciones" auto
+        "secciones" 1000px
         "contacto " auto
         "footer " auto 
         ;
     
     }
 }
-
+.navbar{
+    position:fixed;
+    min-height: 120px;
+    width: 100%;
+    display: block;
+    z-index: 10;
+}
 .header {
     /* Used to position the video and content */
-    position: relative;
+    position:relative;
+    z-index: 1;
+    
 }
 
 .container__wrapper {
@@ -130,6 +139,7 @@ body {
 
     /* Take full width */
     width: 100%;
+    
 }
 
 .container__content {
@@ -147,4 +157,75 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+@media (max-width: 200px) and (max-heigth: 160px) {
+    .skin{
+        font-size: 120px;
+    }
+}
+
+.skin {
+    font-family: 'Mr Dafoe';
+    margin-top: 0.9em;
+    float: center;
+    color: white;
+    text-shadow: 0 0 0.05em #f1c4d5, 0 0 0.3em #f75cc3, 0 0 0.3em #f75cc3;
+    transform: rotate(-7deg);
+  }
+
+.logo{
+    float: center;
+    width: 150px;
+    
+}
+
+
+/* Hide the dropdown's content by default */
+.dropdown__content {
+    display: none;
+
+    /* Position it right below the trigger element */
+    left: 0;
+    padding-top: 4px;
+    position: absolute;
+    top: 100%;
+
+    /* It should be on the top of other elements */
+    background-color: #82d0f2;
+    z-index: 9999;
+
+    /* Size */
+    height: 200px;
+    width: 200px;
+}
+
+/* Show the content when hover on the container */
+.dropdown:hover .dropdown__content {
+    display: block;
+}
+
+.dropdown {
+	box-shadow: -8px 5px 0px 0px #4cbded;
+	background:linear-gradient(to bottom, #82d0f2 5%, #82d0f2 100%);
+	background-color:#82d0f2;
+	border-radius:18px;
+	border:1px solid #82d0f2;
+	color: transparent;
+	cursor:pointer;
+	font-family:Arial;
+	font-size:17px;
+	padding:8px 36px;
+	text-decoration:none;
+    position: relative;
+    float: left;
+    padding-top: 1.5cm;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #82d0f2 5%, #82d0f2 100%);
+	background-color:#82d0f2;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
 }
